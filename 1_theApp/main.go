@@ -8,7 +8,7 @@ import (
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	os.Setenv("dep-env", "dev")
+	os.Setenv("dep-env", "prod")
 	depenv := os.Getenv("dep-env")
 	hostname, err := os.Hostname()
 	if err != nil {
